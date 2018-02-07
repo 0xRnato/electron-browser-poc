@@ -1,0 +1,47 @@
+{
+  "name": "electron-browser-poc",
+  "version": "0.0.0",
+  "description": "A simple electron brwoser POC",
+  "license": "MIT",
+  "main": "main/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zRnatoNeto/electron-browser-poc.git"
+  },
+  "author": {
+    "name": "Renato Neto",
+    "email": "rnato.netoo@gmail.com",
+    "url": "https://github.com/zRnatoNeto"
+  },
+  "bugs": {
+    "url": "https://github.com/zRnatoNeto/electron-browser-poc/issues"
+  },
+  "homepage": "https://github.com/zRnatoNeto/electron-browser-poc#readme",
+  "dependencies": {
+    "electron": "^1.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "electron-packager": "^10.1.2",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

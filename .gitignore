@@ -1,0 +1,68 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/libpeerconnection.log
+testem.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
+build/Release
+release-builds/
+
+# dependencies
+node_modules/
+bower_components/
+jspm_packages/
+
+# Coverage directory used by tools like istanbul
+lib-cov
+coverage/
+.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+.grunt
+.lock-wscript
+.node_repl_history
+*.tgz
+.yarn-integrity
+.env
+
+# Cache
+.npm
+.eslintcache
+
+# System Files
+.DS_Store
+Thumbs.db

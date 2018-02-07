@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb"
+  ],
+  "rules": {
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "max-len": ["error", 100],
+    "curly": ["error", "multi-or-nest"],
+    "no-unused-vars": "warn",
+    "func-names": ["error", "never"],
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": { "array": false, "object": true },
+      "AssignmentExpression": { "array": true, "object": false } },
+      { "enforceForRenamedProperties": false }],
+    "global-require": "warn",
+    "import/no-dynamic-require": "warn",
+    "valid-jsdoc": "error"
+  }
+}
