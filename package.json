@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "description": "A simple electron brwoser POC",
   "license": "MIT",
-  "main": "main/index.js",
-  "scripts": {},
+  "main": "renderer/index",
+  "scripts": {
+    "dev": "webpack-dev-server --progress --colors --inline --hot --config=./config/webpack.config.js",
+    "prod": "webpack --progress -p"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zRnatoNeto/electron-browser-poc.git"
@@ -19,14 +22,29 @@
   },
   "homepage": "https://github.com/zRnatoNeto/electron-browser-poc#readme",
   "dependencies": {
-    "electron": "^1.8.2"
+    "electron": "^1.8.2",
+    "history": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "font-awesome": "^4.7.0",
+    "react-router": "^4.2.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-react-html-attrs": "^2.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.1",
+    "css-loader": "^0.28.9",
     "electron-packager": "^10.1.2",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -34,13 +52,9 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "lodash": "^4.17.5",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }

@@ -1,24 +1,23 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const ROOT_PATH = `${__dirname}/..`;
+
 module.exports = {
-  entry: './src/index.jsx',
+  entry: `${ROOT_PATH}/renderer/index.jsx`,
   output: {
-    path: __dirname + '/public',
-    filename: './app.js'
+    path: `${ROOT_PATH}/build/dist`,
+    filename: './browser.js',
   },
   devServer: {
     port: 8080,
-    contentBase: './public'
+    contentBase: `${ROOT_PATH}/build/dist`,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    alias: {
-      modules: __dirname + '/node_modules'
-    }
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('browser.css'),
   ],
   module: {
     loaders: [{
@@ -27,14 +26,14 @@ module.exports = {
       exclude: /node_modules/,
       query: {
         presets: ['es2015', 'react'],
-        plugins: ['transform-object-rest-spread']
-      }
+        plugins: ['transform-object-rest-spread'],
+      },
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
     }, {
       test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-      loader: 'file'
-    }]
-  }
-}
+      loader: 'file',
+    }],
+  },
+};
